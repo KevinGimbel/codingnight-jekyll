@@ -1,0 +1,37 @@
+<header class="site-header">
+  {% comment %}
+  Here we use the site variables defined in _config.yml
+  In Jekyll, variables can be used with {{ variablename }}
+  {% endcomment %}
+
+  <h1 class="site-title">{{ site.title }}</h1>
+  <h2 class="site-tagline">{{ site.tagline }}</h2>
+  <p class="description">{{ site.description }}</p>
+
+{% comment %}
+The code below generates the navigation.
+It "loops" through all pages (site.pages) and outputs each page that has a title.
+to "loop" means to go over a set of data and use each element. For example, if we loop
+through the number 1,2,3,4,5 and output every number on a new line, the output looks like this
+1
+2
+3
+4
+5
+
+A loop is an important construct of programming that exists in most programming languages in one or
+more ways.
+{% endcomment %}
+<nav>
+  <a href="/" title="Home page">Home</a>
+  <!-- The code below goes over all pages inside the site.pages variable-->
+  {% for my_page in site.pages %}
+    {% if my_page.title %}
+    {% comment %}
+      Each page in site.pages is output as a link
+    {% endcomment %}
+      <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+    {% endif %}
+  {% endfor %}
+</nav>
+</header>

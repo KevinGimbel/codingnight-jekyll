@@ -1,0 +1,68 @@
+/*
+ * This is the default style.css file which has some CSS for basic styling of our website.
+ * Try and change it to match your style!
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #aaa;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ac1;
+}
+
+/*
+ * You can group multiple selectors together
+ */
+.site-header,
+.page-content,
+.site-footer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/*
+ * Selectors can be repeated - the styles will all apply in the end.
+ */
+.site-header {
+  background: #f1f1f1;
+  color: #666;
+}
+
+.site-title {
+  color: #000;
+}
+
+.site-tagline {
+  font-style: italic;
+}
+
+.page-content,
+.site-footer {
+  margin: 1rem auto;
+  padding-top: 16px;
+  border-top: 2px solid #000;
+}
+
+/*
+ * Below are some styles related to posts. They are used on the post page, for example
+ * http://localhost:4000/default/2017/my-first-post if you did not change the settings
+ */
+
+.post-content {
+  margin-top: 16px;
+}
